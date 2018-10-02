@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Plain "Complex" CSS-Spinner</title>
+
+	<style>
+		.clxSpinner {
+			width: 70px;
+			background: none;
+		}
+		.clxSpinner, .outer_top, .outer_bottom, .outer_left, .outer_circle,
+			.center_circle, .center_circle .left, .inner_circle {
+			height: 70px;
+		}
+		.outer_circle>div>div, .outer_circle .left, .center_circle,
+			.center_circle>div>div, .center_circle .left, .inner_circle,
+			.inner_circle>div>div, .inner_circle .left {
+			position: relative;
+		}
+		.center_circle {
+			top: -70px;
+		}
+		.inner_circle {
+			top: -140px;
+		}
+		.outer_circle>div, .outer_circle>div>div, .center_circle>div,
+			.center_circle>div>div, .inner_circle>div, .inner_circle>div>div {
+			overflow: hidden;
+		}
+		.outer_circle .top, .outer_circle .bottom {
+			height: 30px;
+		}
+		.outer_bottom {
+			top: -40px;
+		}
+		.outer_circle .left {
+			width: 10px;
+			top: -70px;
+		}
+		.outer_left {
+			width: 70px;
+		}
+		.outer_top:before, .outer_bottom:before, .outer_left:before {
+			content: '';
+			width: 60px;
+			height: 60px;
+			bottom: 5px;
+			left: 5px;
+		}
+		.center_circle .top, .center_circle .bottom {
+			height: 30px;
+		}
+		.inner_circle .bottom {
+			bottom: 26px;
+		}
+		.center_top {
+			margin: 7px auto;
+		}
+		.center_top, .center_bottom, .center_left {
+			width: 56px;
+			height: 56px;
+		}
+		.center_bottom {
+			bottom: 33px;
+			margin: auto;
+		}
+		.center_circle .left {
+			width: 8px;
+			left: 7px;
+			top: -63px;
+		}
+		.center_top:before, .center_bottom:before, .center_left:before {
+			content: '';
+			width: 46px;
+			height: 46px;
+			bottom: 5px;
+			left: 5px;
+		}
+		.inner_circle .top, .inner_circle .bottom {
+			height: 30px;
+		}
+		.inner_circle .left {
+			height: 60px;
+			width: 7px;
+			left: 14px;
+			top: -56px;
+		}
+		.inner_top, .inner_bottom, .inner_left {
+			width: 42px;
+			height: 42px;
+		}
+		.inner_top {
+			margin: 14px auto;
+		}
+		.inner_top:before, .inner_bottom:before, .inner_left:before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			bottom: 5px;
+			left: 5px;
+		}
+		.inner_bottom {
+			bottom: 26px;
+			margin: auto;
+		}
+		.outer_circle .top, .center_circle .top, .inner_circle .top {
+			margin-bottom: 10px;
+		}
+		.br, .br:before {
+			border-radius: 50%;
+		}
+		*:before {
+			position: absolute;
+			box-shadow: 0px 0px 0px 200px #7eba00;
+		}
+
+		@keyframes spinner {to { transform:rotate(360deg);}
+
+		}
+		.inner_circle {
+			animation: spinner 2s ease infinite;
+		}
+		.center_circle {
+			animation: spinner 2s ease infinite;
+			animation-delay: 0.2s;
+		}
+
+		.outer_circle {
+			animation: spinner 2s ease infinite;
+			animation-delay: 0.3s;
+		}
+</style>
+
+</head>
+
+<body>
+	<div class="clxSpinner">
+		<div class="outer_circle">
+			<div class="top">
+				<div class="outer_top br"></div>
+			</div>
+			<div class="bottom">
+				<div class="outer_bottom br"></div>
+			</div>
+			<div class="left">
+				<div class="outer_left br"></div>
+			</div>
+		</div>
+		<div class="center_circle">
+			<div class="top">
+				<div class="center_top br"></div>
+			</div>
+			<div class="bottom">
+				<div class="center_bottom br"></div>
+			</div>
+			<div class="left">
+				<div class="center_left br"></div>
+			</div>
+		</div>
+		<div class="inner_circle">
+			<div class="top">
+				<div class="inner_top br"></div>
+			</div>
+			<div class="bottom">
+				<div class="inner_bottom br"></div>
+			</div>
+			<div class="left">
+				<div class="inner_left br"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
