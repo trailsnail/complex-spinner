@@ -10,8 +10,8 @@
 	animation: spinner 4s ease infinite;
 	background-size: 100%;
 	position: fixed;
-	top: calc(50% -(var(--spinner-size) / 2));
-	left: calc(50% -(var(--spinner-size) / 2));
+	top: calc(50% - (var(--spinner-size) / 2));
+	left: calc(50% - (var(--spinner-size) / 2));
 }
 
 .clxLogoSpinner:before {
