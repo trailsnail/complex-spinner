@@ -17,3 +17,6 @@ document.getElementById('clickMe').addEventListener('click', function(ev) {
     document.querySelector('body').appendChild(spinner);
 });
 ```
+
+## Demo
+![Complex-Spinner Demo](demo/complex-spinner.gif)
