@@ -69,6 +69,15 @@ class ClxSpinner extends HTMLElement {
     this.attachShadow({mode: 'open'});
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
+
+  }
+
+  connectedCallback() {
+
+    if (typeof this.dataset.size != "undefined") {
+      document.documentElement.style.setProperty('--spinner-size', this.dataset.size );
+    }
+
     this._layer = this.shadowRoot.querySelector('.clx_curtain');
     this._layer.addEventListener('click', function(ev) {
       document.querySelector('clx-spinner').remove();

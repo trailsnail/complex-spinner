@@ -25,6 +25,8 @@
 	<script>
 		document.getElementById('clickMe').addEventListener('click', function(ev) {
 			var spinner = document.createElement("clx-spinner");
+            // add data-size for dynamic size given from callsite
+			spinner.dataset.size = '100px';
 			document.querySelector('body').appendChild(spinner);
 		});
 	</script>
