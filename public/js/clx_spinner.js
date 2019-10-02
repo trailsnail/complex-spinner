@@ -1,6 +1,6 @@
 const template = document.createElement('template');
 template.innerHTML = `
-      <link rel="stylesheet" type="text/css" href="clx_spinner.css">
+      <link rel="stylesheet" type="text/css" href="css/clx_spinner.css">
       <div class="clx_spinner"></div>
 `;
 
