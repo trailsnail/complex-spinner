@@ -1,0 +1,60 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+            "header header header header"
+            "main main main main";
+    justify-items: center;
+    overflow: hidden;
+}
+.content {
+    padding: 20px;
+    grid-area: header;
+}
+#clickMe {
+    width: 100%;
+    padding: 15px;
+    font-size: 15pt;
+    animation: buttonPulse 2s ease infinite;
+}
+.spinner_styles {
+    display: flex;
+    margin: 20px 0;
+}
+button {
+    background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+    border: 1px solid #000;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+    text-transform: uppercase;
+}
+button:hover {
+    box-shadow: inset 0 0 5px 3px green;
+}
+button:disabled {
+    color: #afafaf;
+    text-shadow: 0 0 8px #afafaf;
+}
+button:disabled:hover {
+    box-shadow: none;
+}
+.spinner_styles button {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+@keyframes buttonPulse {
+    0% {
+        color: #00a100;
+        text-shadow: none;
+    }
+    50% {
+        color: #00ff00;
+        text-shadow: 0 0 8px #00ff00;
+    }
+    100% {
+        color: #00a100;
+        text-shadow: none;
+    }
+}
