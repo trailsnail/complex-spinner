@@ -1,7 +1,8 @@
 const template = document.createElement('template');
 template.innerHTML = `
       <link rel="stylesheet" type="text/css" href="clx_spinner.css">
-			<div class="clx_curtain"><div class="clx_spinner"></div></div>`;
+      <div class="clx_spinner"></div>
+`;
 
 class ClxSpinner extends HTMLElement {
   constructor() {
@@ -19,10 +20,9 @@ class ClxSpinner extends HTMLElement {
       document.documentElement.style.setProperty('--spinner-size', this.dataset.size );
     }
 
-    this._layer = this.shadowRoot.querySelector('.clx_curtain');
-    this._layer.addEventListener('click', function(ev) {
-      document.querySelector('clx-spinner').remove();
-    });
+    if (typeof this.dataset.class != "undefined") {
+      this.shadowRoot.querySelector('.clx_spinner').classList.add(this.dataset.class);
+    }
   }
 }
 
