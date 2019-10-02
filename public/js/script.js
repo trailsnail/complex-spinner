@@ -12,7 +12,7 @@
     if (!scriptLoaded) {
       var script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = "clx_spinner.js";
+      script.src = "js/clx_spinner.js";
       document.getElementsByTagName("head")[0].appendChild(script);
 
       scriptLoaded = true;
