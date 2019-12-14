@@ -15,4 +15,4 @@ Gibt es noch offene Todos, TechInfos, Abhängigkeiten? Wenn nicht, Block entfern
 
 # Testplan
 - Wo und wie kann die Anpassung getestet werden?
-- Auf was muss spziell geachtet werden?
+- Auf was muss speziell geachtet werden?
