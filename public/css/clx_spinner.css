@@ -45,6 +45,16 @@
 .clx_spinner.colorized {
 	animation: spinner_colorized 4s ease infinite;
 }
+.clx_spinner.three_dee.colorized {
+	animation: spinner_colorized 4s ease infinite;
+}
+.clx_spinner.three_dee.colorized:before {
+	animation: swirl_colorized 4s ease-in-out infinite;
+}
+.clx_spinner.three_dee.colorized:after {
+	animation: swirl_colorized 2s ease-in-out infinite;
+}
+
 .change_style {
 	position: absolute;
 }
@@ -69,6 +79,20 @@
 	}
 	100% {
 		transform: scaleX(1) rotate(360deg);
+	}
+}
+@keyframes swirl_colorized {
+	0% {
+		transform: scaleX(1) rotate(360deg);
+		filter: hue-rotate(0deg);
+	}
+	50% {
+		transform: scaleX(-1);
+		filter: hue-rotate(360deg);
+	}
+	100% {
+		transform: scaleX(1) rotate(360deg);
+		filter: hue-rotate(0deg);
 	}
 }
 

@@ -21,7 +21,15 @@ class ClxSpinner extends HTMLElement {
     }
 
     if (typeof this.dataset.class != "undefined") {
-      this.shadowRoot.querySelector('.clx_spinner').classList.add(this.dataset.class);
+      var classOrClasses = this.dataset.class;
+      if (classOrClasses.indexOf(' ') != -1) {
+        var classes = classOrClasses.split(' ');
+        classes.forEach(className => {
+          this.shadowRoot.querySelector('.clx_spinner').classList.add(className);
+        })
+      } else {
+        this.shadowRoot.querySelector('.clx_spinner').classList.add(this.dataset.class);
+      }
     }
   }
 }
